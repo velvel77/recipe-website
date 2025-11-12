@@ -1,3 +1,7 @@
 body {
     background-color: #DCACAC
 }
+
+#description {
+    border: 1px solid black;
+}
