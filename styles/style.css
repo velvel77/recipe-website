@@ -4,10 +4,29 @@ html {
 }
 
 body {
-    width: 600px;
+    width: 1280px;
+    height: 1336px;
     margin: 0 auto;
+}
+
+main {
+    box-sizing: border-box; /* Includes padding inside the max-width */
+    width: 1280px;
+    max-width: 1280px;
+    height: 1336px;
+    margin: 0 auto;
+    margin-bottom: 20px;
     background-color: white;
-    padding: 48px 48px 64px 48px
+    padding: 48px 48px 64px 48px;
+}
+
+/* display: flex is an easier solution but since figma specified grid I'm using display grid (potential better scalability) */
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 1184px;
+    height: 516px;
 }
 
 #description {
@@ -26,4 +45,18 @@ h2 {
 
 p {
     
+}
+
+#header-image {
+    display: block;
+    max-width: 100%;
+    width: 1280px;
+    height: 500px;
+    border: 1px white;
+}
+
+.suggestion-picture {
+    width: 580px;
+    height: 467px;
+    min-width: 300px;
 }
