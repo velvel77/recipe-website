@@ -5,15 +5,16 @@ html {
 
 body {
     width: 1280px;
-    height: 1336px;
+    height: auto; /* Using auto instead of 1336px to simulate figma hug property but they might be interchangable */
     margin: 0 auto;
 }
 
 main {
     box-sizing: border-box; /* Includes padding inside the max-width */
+    gap: 24px;
     width: 1280px;
     max-width: 1280px;
-    height: 1336px;
+    height: auto;
     margin: 0 auto;
     margin-bottom: 20px;
     background-color: white;
@@ -26,25 +27,42 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     width: 1184px;
-    height: 516px;
+    padding-top: 24px;
+    /* Height is omitted since it adds unwanted padding at the bottom */
 }
 
 #description {
-    border: 1px solid black;
+    width: auto; /* Avoiding the figma specific 1184px; since it breaks the padding */
+    height: auto;
+    padding: 16px;
+    gap: 10px;
     background-color: rgba(235, 235, 235, 1);
 }
 
 h1 {
     margin: 0;
     color: #A10000;
+    font-size: 28px;
+    font-weight: 700;
+    
 }
 
 h2 {
-    
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 p {
-    
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+ul, ol, li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
 }
 
 #header-image {
@@ -60,3 +78,5 @@ p {
     height: 467px;
     min-width: 300px;
 }
+
+
