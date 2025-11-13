@@ -75,7 +75,7 @@ li {
     max-width: 100%;
     width: 1280px;
     height: 500px;
-    border: 1px #FCFCFC;
+    border: 1px solid #FCFCFC;
     object-fit: cover;
 }
 
