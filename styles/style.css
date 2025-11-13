@@ -1,23 +1,25 @@
 html {
-    background-color: #A100004D;
+    background-color: #ff00004d;
     font-family: "Open Sans", sans-serif;
 }
 
 body {
     width: 1280px;
-    height: auto; /* Using auto instead of 1336px to simulate figma hug property but they might be interchangable */
+    height: auto;
+    /* Using auto instead of 1336px to simulate figma hug property but they might be interchangable */
     margin: 0 auto;
 }
 
 main {
-    box-sizing: border-box; /* Includes padding inside the max-width */
+    box-sizing: border-box;
+    /* Includes padding inside the max-width */
     gap: 24px;
     width: 1280px;
     max-width: 1280px;
     height: auto;
     margin: 0 auto;
     margin-bottom: 20px;
-    background-color: white;
+    background-color: #FCFCFC;
     padding: 48px 48px 64px 48px;
 }
 
@@ -32,7 +34,8 @@ section {
 }
 
 #description {
-    width: auto; /* Avoiding the figma specific 1184px; since it breaks the padding */
+    width: auto;
+    /* Avoiding the figma specific 1184px; since it breaks the padding */
     height: auto;
     padding: 16px;
     gap: 10px;
@@ -44,7 +47,7 @@ h1 {
     color: #A10000;
     font-size: 28px;
     font-weight: 700;
-    
+
 }
 
 h2 {
@@ -59,7 +62,9 @@ p {
     line-height: 100%;
 }
 
-ul, ol, li {
+ul,
+ol,
+li {
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
@@ -70,13 +75,55 @@ ul, ol, li {
     max-width: 100%;
     width: 1280px;
     height: 500px;
-    border: 1px white;
+    border: 1px #FCFCFC;
+    object-fit: cover;
 }
 
 .suggestion-picture {
     width: 580px;
     height: 467px;
     min-width: 300px;
+    object-fit: cover;
 }
 
+@media (max-width: 440px) {
 
+    body {
+        width: 100%;
+        background-color: #FCFCFC;
+    }
+
+    main {
+        width: 100%;
+        gap: 24px;
+        max-width: 1280px;
+        height: auto;
+        background-color: #FCFCFC;
+        padding: 48px 16px 64px 16px;
+    }
+
+    section {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    #description {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 16px;
+        gap: 10px;
+    }
+
+    #header-image {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border: 1px #FCFCFC;
+    }
+
+    .suggestion-picture {
+        width: 100%;
+        height: 467px;
+        object-fit: cover;
+    }
+}
