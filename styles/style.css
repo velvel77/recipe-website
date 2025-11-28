@@ -3,6 +3,19 @@ html {
     font-family: "Open Sans", sans-serif;
 }
 
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #a41b1b4d;
+}
+
+.nav-link {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
 body {
     width: 1280px;
     height: auto;
@@ -10,11 +23,8 @@ body {
     margin: 0 auto;
 }
 
-main {
+#main-body-container {
     box-sizing: border-box;
-    /* Includes padding inside the max-width */
-    gap: 24px;
-    width: 1280px;
     max-width: 1280px;
     height: auto;
     margin: 0 auto;
@@ -24,7 +34,7 @@ main {
 }
 
 /* display: flex is an easier solution but since figma specified grid I'm using display grid (potential better scalability) */
-section {
+#picture-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
@@ -70,6 +80,49 @@ li {
     line-height: 32px;
 }
 
+table {
+    font-family: sans-serif;
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    font-size: 0.8rem;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(254, 201, 244);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
 #header-image {
     box-sizing: border-box;
     display: block;
@@ -94,7 +147,7 @@ li {
         background-color: #FCFCFC;
     }
 
-    main {
+    #main-body-container {
         width: 100%;
         gap: 24px;
         max-width: 1280px;
@@ -103,7 +156,7 @@ li {
         padding: 48px 16px 64px 16px;
     }
 
-    section {
+    #picture-container {
         width: 100%;
         grid-template-columns: 1fr;
     }
