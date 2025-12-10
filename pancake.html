@@ -15,62 +15,62 @@
 <body>
     <a class="skiplink" href="#content">Skip to content</a>
     <header id="site-header">
-        <nav class="navbar">
+        <nav class="site-header__navbar">
             <a class="nav-link" href="#LOGO">LOGO</a>
 
-            <div class="nav-wrapper">
-                <a class="nav-link" href="#recept">Recept</a>
-                <a class="nav-link" href="#om-oss">Om oss</a>
-                <a class="nav-link" href="#kontakt">Kontakt</a>
+            <div class="site-header__wrapper">
+                <a class="site-header__link" href="#recept">Recept</a>
+                <a class="site-header__link" href="#om-oss">Om oss</a>
+                <a class="site-header__link" href="#kontakt">Kontakt</a>
             </div>
 
-            <a class="nav-link" href="#logga-in">Logga in</a>
+            <a class="site-header__link" href="#logga-in">Logga in</a>
         </nav>
     </header>
 
     <main role="main" id="content">
-        <header id="main-header">
+        <header class="main-header">
             <figure>
-                <img id="header-image" src="images/pannkakor-recept.jpg" alt="Pannkakor med frukt och grädde" />
+                <img class="main-header__image" src="images/pannkakor-recept.jpg" alt="Pannkakor med frukt och grädde" />
             </figure>
         </header>
 
-        <div id="main-body-container">
-            <section id="introduction-section">
-                <h1>Enkelt recept på pannkakor</h1>
+        <article class="main-body">
+            <section class="main-body__introduction">
+                <h1 class="main-body__title">Enkelt recept på pannkakor</h1>
 
-                <p id="description">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</p>
+                <p class="main-body__description">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</p>
             </section>
 
-            <section class="main-section">
-                <h2>Ingredienser</h2>
+            <section class="main-body__category">
+                <h2 class="main-body__heading">Ingredienser</h2>
 
-                <p>För 4 portioner</p>
+                <p class="main-body__text">För 4 portioner</p>
 
-                <ul class="main-section">
-                    <li>2 1/2 dl vetemjöl</li>
-                    <li>1/2 tsk salt</li>
-                    <li>6 dl mjölk</li>
-                    <li>3 ägg</li>
-                    <li>smör (till stekning)</li>
-                    <li>sylt, bär eller frukt till servering</li>
+                <ul class="main-body__list">
+                    <li class="item">2 1/2 dl vetemjöl</li>
+                    <li class="item">1/2 tsk salt</li>
+                    <li class="item">6 dl mjölk</li>
+                    <li class="item">3 ägg</li>
+                    <li class="item">smör (till stekning)</li>
+                    <li class="item">sylt, bär eller frukt till servering</li>
                 </ul>
             </section>
 
-            <section id="instructions">
+            <section class="main-body__category">
                 <h2>Så här gör du</h2>
 
-                <ol id="instruction-list">
-                    <li>Blanda mjöl och socker i en bunke.</li>
-                    <li>Vispa i hälften av mjölken och vispa till en slät smet.</li>
-                    <li>Vispa i resten av mjölken och äggen.</li>
-                    <li>Låt smeten vila ca 10 minuter.</li>
-                    <li>Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek- eller pannkakspanna.</li>
-                    <li>Servera med sylt, bär eller frukt.</li>
+                <ol class="main-body__list">
+                    <li class="item">Blanda mjöl och socker i en bunke.</li>
+                    <li class="item">Vispa i hälften av mjölken och vispa till en slät smet.</li>
+                    <li class="item">Vispa i resten av mjölken och äggen.</li>
+                    <li class="item">Låt smeten vila ca 10 minuter.</li>
+                    <li class="item">Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek- eller pannkakspanna.</li>
+                    <li class="item">Servera med sylt, bär eller frukt.</li>
                 </ol>
             </section>
 
-            <section class="main-section:">
+            <section class="main-body__category">
                 <h2>Näringsinnehåll:</h2>
 
                 <table class="nutrient-table">
@@ -130,20 +130,20 @@
                 </table>
             </section>
             
-            <article id="image-section">
+            <footer class="main-footer">
                 <h2>Serveringsförslag:</h2>
-                <div id="picture-container">
+                <div class="main-footer__container">
                     <figure>
-                        <img class="suggestion-picture" src="images/pannkaka-servering1.jpg"
+                        <img class="main-footer__picture" src="images/pannkaka-servering1.jpg"
                         alt="Pannkakor med seperat grädde" />
                     </figure>
                     <figure>
-                        <img class="suggestion-picture" src="images/pannkaka-servering2.jpg"
+                        <img class="main-footer__picture" src="images/pannkaka-servering2.jpg"
                         alt="Pannkakor med olika pålägg" />
                     </figure>
                 </div>
-            </article>
-        </div>
+            </footer>
+        </article>
     </main>
 
 </body>
