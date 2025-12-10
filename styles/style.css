@@ -3,18 +3,46 @@ html {
     font-family: "Open Sans", sans-serif;
 }
 
+.skiplink {
+   display: inline-block;
+   color: #555;
+   background: #fff;
+   padding: .5em;
+   position: absolute;
+   left: -99999rem;
+   z-index: 100;
+}
+.skiplink:focus {
+   left: 0;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 14px 20px;
+    background-color: #a41b1b4d;
+}
+
+.nav-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
 body {
-    width: 1280px;
+    max-width: 1280px;
     height: auto;
-    /* Using auto instead of 1336px to simulate figma hug property but they might be interchangable */
     margin: 0 auto;
 }
 
-main {
+#main-body-container {
     box-sizing: border-box;
-    /* Includes padding inside the max-width */
-    gap: 24px;
-    width: 1280px;
     max-width: 1280px;
     height: auto;
     margin: 0 auto;
@@ -23,19 +51,16 @@ main {
     padding: 48px 48px 64px 48px;
 }
 
-/* display: flex is an easier solution but since figma specified grid I'm using display grid (potential better scalability) */
-section {
+#picture-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-    width: 1184px;
+    max-width: 1184px;
     padding-top: 24px;
-    /* Height is omitted since it adds unwanted padding at the bottom */
 }
 
 #description {
     width: auto;
-    /* Avoiding the figma specific 1184px; since it breaks the padding */
     height: auto;
     padding: 16px;
     gap: 10px;
@@ -70,6 +95,49 @@ li {
     line-height: 32px;
 }
 
+table {
+    font-family: sans-serif;
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    font-size: 0.8rem;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(254, 201, 244);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
 #header-image {
     box-sizing: border-box;
     display: block;
@@ -87,6 +155,10 @@ li {
     object-fit: cover;
 }
 
+figure {
+    margin: 0;
+}
+
 @media (max-width: 440px) {
 
     body {
@@ -94,7 +166,7 @@ li {
         background-color: #FCFCFC;
     }
 
-    main {
+    #main-body-container {
         width: 100%;
         gap: 24px;
         max-width: 1280px;
@@ -103,7 +175,7 @@ li {
         padding: 48px 16px 64px 16px;
     }
 
-    section {
+    #picture-container {
         width: 100%;
         grid-template-columns: 1fr;
     }
