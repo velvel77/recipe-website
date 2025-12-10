@@ -3,23 +3,41 @@ html {
     font-family: "Open Sans", sans-serif;
 }
 
+.skiplink {
+   display: inline-block;
+   color: #555;
+   background: #fff;
+   padding: .5em;
+   position: absolute;
+   left: -99999rem;
+   z-index: 100;
+}
+.skiplink:focus {
+   left: 0;
+}
+
+
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 14px 20px;
     background-color: #a41b1b4d;
+}
+
+.nav-wrapper {
+    display: flex;
+    gap: 1rem;
 }
 
 .nav-link {
     color: white;
-    padding: 14px 20px;
     text-decoration: none;
-    text-align: center;
 }
 
 body {
-    width: 1280px;
+    max-width: 1280px;
     height: auto;
-    /* Using auto instead of 1336px to simulate figma hug property but they might be interchangable */
     margin: 0 auto;
 }
 
@@ -33,19 +51,16 @@ body {
     padding: 48px 48px 64px 48px;
 }
 
-/* display: flex is an easier solution but since figma specified grid I'm using display grid (potential better scalability) */
 #picture-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-    width: 1184px;
+    max-width: 1184px;
     padding-top: 24px;
-    /* Height is omitted since it adds unwanted padding at the bottom */
 }
 
 #description {
     width: auto;
-    /* Avoiding the figma specific 1184px; since it breaks the padding */
     height: auto;
     padding: 16px;
     gap: 10px;
@@ -138,6 +153,10 @@ tfoot td {
     height: 467px;
     min-width: 300px;
     object-fit: cover;
+}
+
+figure {
+    margin: 0;
 }
 
 @media (max-width: 440px) {
