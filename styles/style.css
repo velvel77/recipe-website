@@ -1,5 +1,28 @@
+:root {
+    --primary-bg-color: hsla(0, 100%, 50%, 0.302);
+    --darker-bg-color: hsla(0, 71%, 37%, 0.302);
+    --secondary-bg-color: hsla(0, 0%, 100%, 0);
+
+
+}
+
+/* Shared CSS */
+
 html {
-    background-color: #ff00004d;
+    background-color: var(--primary-bg-color);
+}
+
+.site-header__navbar {
+    background-color: var(--darker-bg-color);
+}
+
+.skiplink {
+    background-color: var(--secondary-bg-color);
+}
+
+/* Individual Styling */
+
+html {
     font-family: "Open Sans", sans-serif;
 }
 
@@ -17,31 +40,39 @@ html {
 }
 
 
-.navbar {
+.site-header__navbar {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
     padding: 14px 20px;
-    background-color: #a41b1b4d;
 }
 
-.nav-wrapper {
+.site-header__wrapper{
     display: flex;
     gap: 1rem;
 }
 
-.nav-link {
+.site-header__link {
     color: white;
     text-decoration: none;
 }
 
 body {
     max-width: 1280px;
-    height: auto;
     margin: 0 auto;
 }
 
-#main-body-container {
+.main-header__image {
+    box-sizing: border-box;
+    display: block;
+    max-width: 100%;
+    width: 1280px;
+    height: 500px;
+    border: 1px solid #FCFCFC;
+    object-fit: cover;
+}
+
+.main-body {
     box-sizing: border-box;
     max-width: 1280px;
     height: auto;
@@ -51,23 +82,15 @@ body {
     padding: 48px 48px 64px 48px;
 }
 
-#picture-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    max-width: 1184px;
-    padding-top: 24px;
-}
 
-#description {
+.main-body__description {
     width: auto;
-    height: auto;
     padding: 16px;
     gap: 10px;
     background-color: rgba(235, 235, 235, 1);
 }
 
-h1 {
+.main-body__title {
     margin: 0;
     color: #A10000;
     font-size: 28px;
@@ -75,21 +98,20 @@ h1 {
 
 }
 
-h2 {
+.main-body__heading {
     margin: 0;
     font-size: 28px;
     font-weight: 700;
 }
 
-p {
+.main-body__text {
     font-size: 16px;
     font-weight: 400;
     line-height: 100%;
 }
 
-ul,
-ol,
-li {
+.main-body__list,
+.item {
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
@@ -138,17 +160,16 @@ tfoot td {
   font-weight: bold;
 }
 
-#header-image {
-    box-sizing: border-box;
-    display: block;
-    max-width: 100%;
-    width: 1280px;
-    height: 500px;
-    border: 1px solid #FCFCFC;
-    object-fit: cover;
+.main-footer__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 1184px;
+    padding-top: 24px;
 }
 
-.suggestion-picture {
+
+.main-footer__picture{
     width: 580px;
     height: 467px;
     min-width: 300px;
