@@ -197,7 +197,7 @@ figure {
 .main-body__container {
     display: grid;
     max-width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(50ch, 1fr));
+    grid-template-columns: minmax(6ch, 20ch) 1fr minmax(6ch, 20ch) 1fr;
     gap: 2rem;
 }
 
@@ -207,16 +207,31 @@ figure {
 }
 
 .main-body__card {
+    grid-column: span 2;
     display: grid;
-    justify-items: center;
+    grid-template-columns: subgrid;
+    grid-template-rows: auto auto 1fr auto;
     max-width: 100%;
     gap: 1.25em;
     box-shadow: var(--default-card-shadow);
 }
 
+.main-body__card > * {
+    grid-column: 1 / -1;
+}
+
+/* .main-body__header,
+.main-body__link--image,
+.main-body__image {
+    grid-column: 2 / 3;
+} */
+
 .main-body__image {
     box-sizing: border-box;
+    display: block;
     width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
 }
 
 .main-body__recipe {
@@ -224,13 +239,21 @@ figure {
     margin: 0 0.75em 0 0.75em;
 }
 
-.main-body__link {
+.main-body__link--text {
+    text-decoration: none;
+}
+
+.main-body__recipe:hover {
+    text-decoration: underline;
+}
+
+.main-body__link--image{
     order: -1;
 }
 
 @media screen and (max-width: 660px) {
     .main-body__container {
-        grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+        grid-template-columns: 1fr;
     }
 }
 
