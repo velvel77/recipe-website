@@ -1,0 +1,66 @@
+:root {
+    --default-card-shadow: 0 4px 12px hsla(0, 0%, 33%, 1);
+}
+
+.main-body__container {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: minmax(6ch, 20ch) 1fr minmax(6ch, 20ch) 1fr;
+    gap: 2rem;
+}
+
+.main-body__title,
+.main-body__heading {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.main-body__card,
+.main-body__image {
+    border-radius: 0.75rem;
+}
+
+.main-body__card {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: auto auto 1fr auto;
+    max-width: 100%;
+    gap: 1.25em;
+    box-shadow: var(--default-card-shadow);
+}
+
+.main-body__card > * {
+    grid-column: 1 / -1;
+}
+
+/* .main-body__header,
+.main-body__link--image,
+.main-body__image {
+    grid-column: 1 / 2;
+} */
+
+.main-body__image {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.main-body__recipe {
+    text-align: center;
+    margin: 0 0.75em 0 0.75em;
+}
+
+.main-body__link--text {
+    text-decoration: none;
+}
+
+.main-body__recipe:hover {
+    text-decoration: underline;
+}
+
+.main-body__link--image{
+    order: -1;
+}

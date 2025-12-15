@@ -5,11 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Pannkakor</title>
-    <link href="styles/style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/global.css" rel="stylesheet" />
+    <link href="styles/style.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -57,7 +60,7 @@
             </section>
 
             <section class="main-body__category">
-                <h2>Så här gör du</h2>
+                <h2 class="main-body__heading">Så här gör du</h2>
 
                 <ol class="main-body__list">
                     <li class="item">Blanda mjöl och socker i en bunke.</li>
@@ -70,7 +73,7 @@
             </section>
 
             <section class="main-body__category">
-                <h2>Näringsinnehåll:</h2>
+                <h2 class="main-body__heading">Näringsinnehåll:</h2>
 
                 <table class="main-body__nutrients">
                     <caption class="main-body__caption">Näringsinnehåll per 100g</caption>
@@ -86,7 +89,7 @@
                         <tr>
                             <th class="main-body__nutrients--primary-cell" scope="row">Energi (kcal)</th>
                             <td class="main-body__nutrients--data-cell">135</td>
-                            <td class="main-body__nutrients--data-cell">2000</td> class="main-body__nutrients--data-cell"
+                            <td class="main-body__nutrients--data-cell">2000</td>
                             <td class="main-body__nutrients--data-cell">6,7</td>
                         </tr>
                         <tr>
@@ -130,7 +133,7 @@
             </section>
             
             <footer class="main-footer">
-                <h2>Serveringsförslag:</h2>
+                <h2 class="main-body__heading">Serveringsförslag:</h2>
                 <div class="main-footer__container">
                     <figure>
                         <img class="main-footer__picture" src="images/pannkaka-servering1.jpg"
