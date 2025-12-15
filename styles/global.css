@@ -1,0 +1,160 @@
+:root {
+    --primary-bg-color: hsla(306, 100%, 50%, 0.268);
+    --darker-bg-color: hsla(297, 46%, 28%, 0.804);
+    --secondary-bg-color: hsla(0, 0%, 100%, 1);
+    --highlighted-heading-color: hsla(0, 100%, 31%, 1);
+    --default-card-shadow: 0 4px 12px hsla(0, 0%, 33%, 1);
+    --table-border: 1px solid hsla(0, 0%, 63%, 1);
+    --table-row-color: hsla(228, 16%, 94%, 1);
+
+    --primary-top-margin: 1.5rem;
+    --primary-margin: 1.25rem;
+}
+
+/*--------------------------/
+*           Masters         >
+* --------------------------\
+*/
+
+
+/* Colors */
+
+html,
+.main-body__nutrients--header {
+    background-color: var(--primary-bg-color);
+}
+
+.site-header__navbar {
+    background-color: var(--darker-bg-color);
+}
+
+.skiplink {
+    background-color: var(--secondary-bg-color);
+}
+
+.main-body {
+    background-color: var(--secondary-bg-color);
+}
+
+.main-body__title {
+    color: var(--highlighted-heading-color);
+}
+
+.main-body__nutrients--primary-cell,
+.main-body__nutrients--data-cell {
+    border: var(--table-border);
+}
+
+.main-body__nutrients--body>tr:nth-of-type(even) {
+    background-color: var(--table-row-color);
+}
+
+/* Font size */
+
+.main-body__recipe {
+    font-size: 1.5rem;
+}
+
+.main-body__title,
+.main-body__heading {
+    font-size: 1.75rem;
+}
+
+/* Font weight */
+
+.main-body__title,
+.main-body__heading,
+.main-body__recipe {
+    font-weight: 700;
+}
+
+/* --- Margins and paddings --- */
+
+.main-body__content {
+    margin: var(--primary-margin);
+}
+
+.main-body__heading,
+.main-body__description,
+.main-body__text,
+.main-body__list,
+.main-body__card {
+    margin-top: var(--primary-top-margin);
+}
+
+.main-body__nutrients--primary-cell,
+.main-body__nutrients--data-cell {
+    padding: 8px 10px;
+}
+
+/* --- Fonts --- */
+
+html {
+    font-family: "Open Sans", sans-serif;
+}
+
+/*--------------------------/
+*    Individual Styling     >
+* --------------------------\
+*/
+
+/* --- Main --- */
+
+body {
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+/* --- Skiplink --- */
+
+.skiplink {
+    display: inline-block;
+    color: #555;
+    background: #fff;
+    padding: .5em;
+    position: absolute;
+    left: -99999rem;
+    z-index: 100;
+}
+
+.skiplink:focus {
+    left: 0;
+}
+
+/* --- Navbar --- */
+
+.site-header__navbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 14px 20px;
+}
+
+.site-header__wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.site-header__link {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Header */
+
+.main-header__image {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #FCFCFC;
+    object-fit: cover;
+}
+
+/* Main Body */
+
+.main-body {
+    max-width: 1280px;
+    height: auto;
+    margin-inline: auto;
+    margin-bottom: 20px;
+    padding: 48px 48px 64px 48px;
+}

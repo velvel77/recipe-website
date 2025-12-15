@@ -1,133 +1,9 @@
-:root {
-    --primary-bg-color: hsla(306, 100%, 50%, 0.268);
-    --darker-bg-color: hsla(297, 46%, 28%, 0.804);
-    --secondary-bg-color: hsla(0, 0%, 100%, 0);
-    --highlighted-heading-color: hsla(0, 100%, 31%, 1);
-    --primary-top-margin: 1.5rem;
-    --primary-margin: 1.25rem;
-    --default-card-shadow: 0 4px 12px hsla(0, 0%, 33%, 1);
-}
-
-/*--------------------------/
-*         Shared CSS        >
-* --------------------------\
-*/
-
-html {
-    background-color: var(--primary-bg-color);
-}
-
-.site-header__navbar {
-    background-color: var(--darker-bg-color);
-}
-
-.skiplink {
-    background-color: var(--secondary-bg-color);
-}
-
-.main-body__title {
-    color: var(--highlighted-heading-color);
-}
-
-.main-body__nutrients--header {
-    background-color: rgb(254, 201, 244);
-}
-
-.main-body__nutrients--primary-cell,
-.main-body__nutrients--data-cell {
-    border: 1px solid rgb(160 160 160);
-    padding: 8px 10px;
-}
-
-.main-body__nutrients--body>tr:nth-of-type(even) {
-    background-color: rgb(237 238 242);
-}
-
-/* --- Margins --- */
-
-.main-body__content {
-    margin: var(--primary-margin);
-}
-
-.main-body__card {
-    margin-top: var(--primary-top-margin);
-}
-
 /*--------------------------/
 *    Individual Styling     >
 * --------------------------\
 */
 
-html {
-    font-family: "Open Sans", sans-serif;
-}
-
-/* --- Skiplink --- */
-
-.skiplink {
-    display: inline-block;
-    color: #555;
-    background: #fff;
-    padding: .5em;
-    position: absolute;
-    left: -99999rem;
-    z-index: 100;
-}
-
-.skiplink:focus {
-    left: 0;
-}
-
-/* --- Navbar --- */
-
-.site-header__navbar {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 14px 20px;
-}
-
-.site-header__wrapper {
-    display: flex;
-    gap: 1rem;
-}
-
-.site-header__link {
-    color: white;
-    text-decoration: none;
-}
-
-/* --- Main --- */
-
-body {
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
 /* Main Header */
-
-.main-header__image {
-    box-sizing: border-box;
-    display: block;
-    max-width: 100%;
-    width: 1280px;
-    height: 500px;
-    border: 1px solid #FCFCFC;
-    object-fit: cover;
-}
-
-/* Main Body */
-
-.main-body {
-    box-sizing: border-box;
-    max-width: 1280px;
-    height: auto;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    background-color: #FCFCFC;
-    padding: 48px 48px 64px 48px;
-}
-
 
 .main-body__description {
     padding: 16px;
@@ -136,17 +12,9 @@ body {
 
 /* Main Header */
 
-.main-body__title {
-    margin: 0;
-    font-size: 28px;
-    font-weight: 700;
-
-}
-
+.main-body__title,
 .main-body__heading {
-    margin: 0;
-    font-size: 28px;
-    font-weight: 700;
+    
 }
 
 .main-body__text {
@@ -160,6 +28,10 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
+}
+
+.main-body__list {
+    padding-left: 24px;
 }
 
 .main-body__nutrients {
@@ -196,63 +68,6 @@ body {
 
 figure {
     margin: 0;
-}
-
-.main-body__container {
-    display: grid;
-    max-width: 100%;
-    grid-template-columns: minmax(6ch, 20ch) 1fr minmax(6ch, 20ch) 1fr;
-    gap: 2rem;
-}
-
-.main-body__card,
-.main-body__image {
-    border-radius: 0.75rem;
-}
-
-.main-body__card {
-    grid-column: span 2;
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-template-rows: auto auto 1fr auto;
-    max-width: 100%;
-    gap: 1.25em;
-    box-shadow: var(--default-card-shadow);
-}
-
-.main-body__card > * {
-    grid-column: 1 / -1;
-}
-
-/* .main-body__header,
-.main-body__link--image,
-.main-body__image {
-    grid-column: 1 / 2;
-} */
-
-.main-body__image {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-}
-
-.main-body__recipe {
-    text-align: center;
-    margin: 0 0.75em 0 0.75em;
-}
-
-.main-body__link--text {
-    text-decoration: none;
-}
-
-.main-body__recipe:hover {
-    text-decoration: underline;
-}
-
-.main-body__link--image{
-    order: -1;
 }
 
 @media screen and (max-width: 660px) {
