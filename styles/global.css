@@ -1,14 +1,18 @@
 :root {
     --primary-bg-color: hsla(306, 100%, 50%, 0.268);
-    --darker-bg-color: hsla(297, 46%, 28%, 0.804);
+    --darker-bg-color: hsl(188, 100%, 41%);
     --secondary-bg-color: hsla(0, 0%, 100%, 1);
-    --highlighted-heading-color: hsla(0, 100%, 31%, 1);
+    --primary-modal-color: hsla(306, 70%, 80%, 1);
     --default-card-shadow: 0 4px 12px hsla(0, 0%, 33%, 1);
     --table-border: 1px solid hsla(0, 0%, 63%, 1);
     --table-row-color: hsla(228, 16%, 94%, 1);
+    --highlighted-heading-color: hsla(0, 100%, 31%, 1);
+    --secondary-text-color:  hsla(0, 0%, 0%, 1);
+    --primary-btn-color: hsla(10, 50%, 90%, 1);
 
     --primary-top-margin: 1.5rem;
     --primary-margin: 1.25rem;
+    --primary-padding: 1rem;
 }
 
 /*--------------------------/
@@ -17,7 +21,7 @@
 */
 
 
-/* Colors */
+/* Background Colors */
 
 html,
 .main-body__nutrients--header {
@@ -25,19 +29,17 @@ html,
 }
 
 .site-header__navbar {
-    background-color: var(--darker-bg-color);
+    background: var(--darker-bg-color);
 }
 
-.skiplink {
-    background-color: var(--secondary-bg-color);
-}
-
+.skiplink,
 .main-body {
-    background-color: var(--secondary-bg-color);
+    background-color: var(--secondary-bg-color)
 }
 
-.main-body__title {
-    color: var(--highlighted-heading-color);
+.site-header__login-btn,
+.site-footer__submit-btn {
+    background-color: var(--primary-btn-color);
 }
 
 .main-body__nutrients--primary-cell,
@@ -47,6 +49,25 @@ html,
 
 .main-body__nutrients--body>tr:nth-of-type(even) {
     background-color: var(--table-row-color);
+}
+
+:modal {
+    background: var(--primary-modal-color);
+}
+
+.site-footer {
+    background-color: var(--darker-bg-color);
+}
+
+/* Text Colors */
+
+.main-body__title {
+    color: var(--highlighted-heading-color);
+}
+
+.site-header__link,
+.site-footer__text {
+    color: var(--secondary-text-color);
 }
 
 /* Font size */
@@ -62,13 +83,22 @@ html,
 
 /* Font weight */
 
+.site-header__link,
+.site-footer__text {
+    font-weight: 500;
+}
+
 .main-body__title,
 .main-body__heading,
 .main-body__recipe {
     font-weight: 700;
 }
 
-/* --- Margins and paddings --- */
+/* --- General margins and paddings --- */
+
+.site-header__navbar {
+    padding: var(--primary-padding);
+}
 
 .main-body__content {
     margin: var(--primary-margin);
@@ -110,7 +140,6 @@ body {
 .skiplink {
     display: inline-block;
     color: #555;
-    background: #fff;
     padding: .5em;
     position: absolute;
     left: -99999rem;
@@ -126,8 +155,8 @@ body {
 .site-header__navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 1rem;
-    padding: 14px 20px;
 }
 
 .site-header__wrapper {
@@ -135,9 +164,45 @@ body {
     gap: 1rem;
 }
 
-.site-header__link {
-    color: white;
+.site-header__link,
+.site-header__login-btn {
     text-decoration: none;
+}
+
+.site-header__login-btn {
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+
+    &:hover {
+        background-color: hsl(from var(--primary-btn-color) h s 95%);
+    }
+}
+
+dialog {
+    border: none;
+    padding: 0;
+}
+
+:modal {
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+
+.site-header__modal-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.site-header__modal-header {
+    display: flex;
+    gap: 1rem;
+}
+
+.site-header__form {
+    display: flex;
+    justify-content: center;
 }
 
 /* Main Header */
@@ -155,8 +220,45 @@ body {
     max-width: 1280px;
     height: auto;
     margin-inline: auto;
-    margin-bottom: 20px;
     padding: 48px 48px 64px 48px;
+}
+
+/* Site Footer */
+
+.site-footer {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.site-footer__card {
+    display: grid;
+    max-width: clamp(200px, 20vw, 400px);
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0.5rem;
+
+    &>* {
+        width: 90%;
+    }
+
+    & label {
+        text-align: center;
+    }
+}
+
+.site-footer__input {
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+}
+
+.site-footer__submit-btn {
+    padding: 0.15rem;
+    border-radius: 0.75rem;
+
+    &:hover {
+        background-color: hsl(from var(--primary-btn-color) h s 100%);
+    }
 }
 
 @media screen and (width < 660px) {
