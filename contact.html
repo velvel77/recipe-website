@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="sv-SE">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Recept</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <link href="./styles/reset.css" rel="stylesheet" />
+    <link href="./styles/global.css" rel="stylesheet" />
+    <link href="./styles/contact.css" rel="stylesheet" />
+</head>
+
+<body>
+    <a class="skiplink" href="#content">Skip to content</a>
+    <header class="site-header">
+        <nav class="site-header__navbar">
+            <a class="site-header__link" href="./index.html">Receptia</a>
+
+            <div class="site-header__wrapper">
+                <a class="site-header__link" href="./index.html">Recept</a>
+                <a class="site-header__link" href="./about-us.html">Om oss</a>
+                <a class="site-header__link" href="./contact.html">Kontakt</a>
+            </div>
+
+            <button 
+                onclick="document.getElementById('viewModal').showModal()" 
+                class="site-header__login-btn"
+                >Logga in</button>
+            
+            <dialog id="viewModal">
+                <div class="site-header__modal-container">
+                    <div class="site-header__modal-header">
+                    <p class="">Placeholder!</p>
+                        <button
+                        type="button"
+                        class="site-header__close-btn"
+                        onclick="document.getElementById('viewModal').close()"
+                        >x</button>
+                    </div>
+                    <form action="#" method="POST" class="site-header__form">
+                        <p>Placeholder</p>
+                    </form>
+                
+                </div>
+            </dialog>
+        </nav>
+    </header>
+
+    <main role="content" id="content">
+
+        <section class="main-body">
+            <h1 class="main-body__title">Kontakta oss</h1>
+
+            <p class="main-body__text">Har du ett fantastiskt recept i bakfickan? Skicka gärna in nedan:</p>
+            
+            <form action="#" method="POST" class="main-body__form">
+                <label for="user-name" class="main-body__label">Ditt namn</label>
+                <input type="text" name="username"
+                id="user-name"
+                class="main-body__input"
+                required
+                autocomplete="name"
+                placeholder="Skriv ditt namn här"
+                />
+
+                <label for="user-email" class="main-body__label">E-post</label>
+                <input type="email" name="email"
+                id="user-email"
+                class="main-body__input"
+                required
+                autocomplete="name"
+                placeholder="Fyll i din epost här..."
+                />
+
+                <label for="recp" class="main-body__label">Recept</label>
+                <select name="recipe" id="recp" class="main-body__input">
+                    <option value="" disabled selected>Välj typ av recept</option>
+                    <option>Kaffe</option>
+                    <option>Te</option>
+                    <option>Övrigt</option>
+                </select>
+
+                <label for="msg" class="main-body__label">Meddelande</label>
+                <textarea name="message" id="msg" rows="5" class="main-body__input"></textarea>
+
+                <button type="submit" class="main-body__submit-btn">Skicka</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <form action="#" method="POST" class="site-footer__card">
+
+            <label for="user-email" class="site-footer__text">Prenumerera på de hetaste recepten:</label>
+            <input type="email" name="email"
+            id="user-email"
+            class="site-footer__input"
+            required
+            autocomplete="name" 
+            placeholder="Fyll i din epost här..."               
+            />
+
+            <button type="submit"
+            class="site-footer__submit-btn">Skicka</button>
+        </form>
+    </footer>
+</body>
+</html>

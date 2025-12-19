@@ -37,6 +37,7 @@ html,
     background-color: var(--secondary-bg-color)
 }
 
+.main-body__submit-btn,
 .site-header__login-btn,
 .site-footer__submit-btn {
     background-color: var(--primary-btn-color);
@@ -88,6 +89,10 @@ html,
     font-weight: 500;
 }
 
+.main-body__label {
+    font-weight: 600;
+}
+
 .main-body__title,
 .main-body__heading,
 .main-body__recipe {
@@ -108,7 +113,8 @@ html,
 .main-body__description,
 .main-body__text,
 .main-body__list,
-.main-body__card {
+.main-body__card,
+.main-body__form {
     margin-top: var(--primary-top-margin);
 }
 
