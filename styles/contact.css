@@ -1,0 +1,37 @@
+:root {
+    --primary-btn-color: hsla(10, 50%, 90%, 1);
+}
+
+/*--------------------------/
+*    Individual Styling     >
+* --------------------------\
+*/
+
+.main-body,
+.main-body__form {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.main-body {
+    justify-items: center;
+}
+
+.main-body__form {
+    width: clamp(320px, 40vw, 1280px);
+    gap: 0.75em;
+}
+
+.main-body__input {
+    padding: 0.5em;
+    border-radius: 0.75em;
+}
+
+.main-body__submit-btn {
+    padding: 0.15rem;
+    border-radius: 0.75rem;
+
+    &:hover {
+        background-color: hsl(from var(--primary-btn-color) h s 95%);
+    }
+}
